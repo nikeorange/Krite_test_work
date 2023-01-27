@@ -1,0 +1,356 @@
+@media (max-width: 1324px)
+    .container
+        width: 952px
+    .header
+        &__top
+            &__left
+                &__location
+                    margin-right: 20px
+            &__right
+                &__account
+                    margin-right: 20px
+        &__bottom
+            &__nav
+                width: 750px
+                padding: 23px 25px
+                &__list
+                    justify-content: space-between
+                    &__item
+                        margin-right: 0 !important
+    .hero
+        &__swiper
+            &__slide
+                &__info
+                    padding: 176px 0px 176px 100px
+    .popular
+        &__list
+            &__item
+                width: 150px
+
+    .sale__swiper__slide__icons
+        z-index: 10
+
+    .tag
+        width: 40px
+        height: 17px
+        font-size: 10px
+        line-height: 180%
+    .actual-price
+        font-size: 14px
+    .old-price
+        font-size: 12px
+    
+    .banner
+        &__list
+            &__item
+                width: 300px
+                overflow: hidden
+                &__text
+                    padding: 47px 0 0 20px
+                &__discount
+                    width: 160px
+                    padding-left: 10px
+                &__img
+                    right: -50px !important
+    .day
+        &__swiper
+            &__slide
+                &__left
+                    width: 400px
+                    &__list
+                        z-index: 100
+    .day__inner
+        &__slide
+            img
+                padding-top: 150px
+                width: 400px
+                height: 400px
+                object-fit: cover
+        &__prev
+            left: 10px
+        &__next
+            right: 10px
+    .articles
+        &__item
+            width: 220px
+            &__img
+                width: 100%
+                object-fit: cover
+
+@media (max-width: 1023px)
+    .container
+        width: 624px
+    .title
+        font-size: 24px
+    .header
+        &__top
+            position: relative
+            &__left
+                position: absolute
+                top: 280px
+                left: -45px
+                z-index: 2000
+                opacity: 0
+                visibility: hidden
+                &__location
+                    &__dropdown
+                        top: 30px
+            &__logo
+                transform: none
+        &__bottom
+            &__nav
+                position: fixed
+                top: 0
+                left: 0
+                padding: 30px
+                width: 50vw
+                height: 100vh
+                opacity: 0
+                visibility: hidden
+                background-color: #D9D9D9
+                z-index: 1000
+                &__list
+                    flex-direction: column
+                    &__item
+                        margin-bottom: 15px
+            &__search
+                width: 100%
+    .burger
+        display: block
+        &__close
+            display: block
+            margin-bottom: 30px
+    .nav-visible
+        opacity: 1
+        visibility: visible
+
+    .hero
+        height: 350px
+        margin-bottom: 30px
+        &__swiper
+            &__slide
+                &__info
+                    width: 370px
+                    padding: 30px 0 0 80px
+                img
+                    width: 250px
+                    height: 390px
+                    object-fit: contain
+                &__title
+                    font-size: 36px
+    .swiper-button-prev,
+    .swiper-button-next
+        top: 160px
+        width: 30px
+        height: 30px
+    
+    .popular
+        margin-bottom: 30px
+        &__list
+            overflow-x: scroll
+            a
+                margin-right: 20px
+            a:last-child
+                margin-right: 0
+            &__item:hover
+                transform: none
+    .sale
+        margin-bottom: 30px
+        &__swiper
+            &__head
+                &__right
+                    width: 70px
+                    height: 30px
+    .banner
+        margin-bottom: 30px
+        &__list
+            overflow-x: scroll
+            &__item
+                width: 280px
+                margin-right: 20px
+                &__text
+                    padding: 30px 0 0 20px
+                    margin-bottom: 50px
+                    font-size: 18px
+                &__img
+                    width: 150px
+                    top: auto
+                    bottom: 0
+                    right: -30px
+    .day
+        margin-bottom: 30px
+        &__swiper
+            &__buttons
+                width: 70px
+            &__slide
+                &__left
+                    width: 100%
+                &__right
+                    width: 300px
+                    &__raiting
+                        margin-bottom: 10px
+                    &__title
+                        width: 300px
+                        font-size: 28px
+                    &__profit
+                        flex-direction: column
+                    &__price
+                        padding-top: 10px
+                        margin-bottom: 5px
+                    &__colors
+                        padding-top: 10px
+                        margin-bottom: 20px
+                    &__size
+                        width: 624px
+                        transform: translateX(-323px)
+                    &__bottom
+                        justify-content: space-between
+                        width: 624px
+                        transform: translateX(-323px)
+        &__inner
+            &__swiper
+                width: 300px
+            &__slide
+                img
+                    padding-top: 40px
+                    width: 300px
+                    height: 300px
+            &__prev
+                left: 0
+            &__next
+                right: 0
+    .articles
+        &__head
+            margin-bottom: 20px
+        &__list
+            overflow-x: scroll
+            a:not(:last-child)
+                margin-right: 20px
+        &__item
+            &__img
+                height: 300px
+
+
+
+
+@media (max-width: 767px)
+    .container
+        width: 296px
+    .title
+        font-size: 18px
+        margin-bottom: 10px
+    .header
+        padding-top: 10px
+        &__top
+            flex-direction: column
+            height: 110px
+            margin-bottom: 10px
+            &__left
+                display: none
+            &__logo
+                padding-bottom: 0px
+            &__right
+                justify-content: space-between
+                width: 296px
+                &__account
+                    flex-direction: column
+                    a:first-child
+                        margin-bottom: 10px
+                    a:first-child::after
+                        opacity: 0
+        &__bottom
+            &__nav
+                width: 70vw
+    .hero
+        height: 250px
+        &__swiper
+            &__slide
+                &__info
+                    width: 150px
+                    padding: 20px 20px 20px 20px
+                &__text
+                    font-size: 16px
+                    line-height: 150%
+                    margin-bottom: 10px
+                &__title
+                    font-size: 18px
+                &__btn
+                    width: 150px
+                    height: 40px
+                &__img
+                    width: 150px !important
+                    height: 150px !important
+                    margin: auto 0
+            &__prev
+                top: 150px
+                left: 0
+            &__next
+                top: 150px
+                right: 0
+    .sale
+        &__swiper
+            &__head
+                &__left
+                    display: flex
+                    flex-wrap: wrap
+                    gap: 10px
+                &__right
+                    flex-direction: column
+                    height: 78px
+                    width: 30px
+            &__btn
+                width: 100px
+                padding: 10px 20px
+                
+    .banner
+        &__list
+            &__item
+                width: 200px
+                height: 200px
+                &__text
+                    font-size: 14px
+                    margin-bottom: 10px
+                    padding: 30px 0 0 10px
+                &__discount
+                    font-size: 18px
+                    height: 40px
+                    width: 120px
+                    span
+                        font-size: 20px
+                .b-l-i-i-2
+                    right: 0px !important
+                    width: 100px
+
+    .day
+        height: fit-content
+        &__swiper
+            &__head
+                height: 30px
+                margin-bottom: 10px
+            &__slide
+                flex-direction: column
+                &__right
+                    &__size
+                        width: 296px
+                        transform: translateX(0px)
+                        &__list
+                            width: 100%
+                            flex-wrap: wrap
+                            gap: 10px
+                    &__bottom
+                        justify-content: space-between
+                        width: 296px
+                        transform: translateX(0px)
+                        &__left
+                            margin-right: 0
+                        &__btn
+                            width: 160px
+    .articles
+        margin-bottom: 10px
+        &__title
+            margin-bottom: 0
+        &__list
+        &__item
+            width: 180px
+            &__img
+                height: 200px
