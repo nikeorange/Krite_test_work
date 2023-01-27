@@ -1,0 +1,907 @@
+@font-face
+    font-family: 'Inter'
+    src: url('../fonts/Inter-LightBETA.woff2') format('woff2'), url('../fonts/Inter-LightBETA.woff') format('woff')
+    font-display: swap
+    font-weight: 300
+    font-style: normal
+@font-face
+    font-family: 'Inter'
+    src: url('../fonts/Inter-Regular.woff2') format('woff2'), url('../fonts/Inter-Regular.woff') format('woff')
+    font-display: swap
+    font-weight: 400
+    font-style: normal
+@font-face
+    font-family: 'Inter'
+    src: url('../fonts/Inter-Medium.woff2') format('woff2'), url('../fonts/Inter-Medium.woff') format('woff')
+    font-display: swap
+    font-weight: 500
+    font-style: normal
+@font-face
+    font-family: 'Inter'
+    src: url('../fonts/Inter-SemiBold.woff2') format('woff2'), url('../fonts/Inter-SemiBold.woff') format('woff')
+    font-display: swap
+    font-weight: 600
+    font-style: normal
+@font-face
+    font-family: 'Inter'
+    src: url('../fonts/Inter-Bold.woff2') format('woff2'), url('../fonts/Inter-Bold.woff') format('woff')
+    font-display: swap
+    font-weight: 700
+    font-style: normal
+@font-face
+    font-family: 'Prata'
+    src: url('../fonts/Prata-Regular.woff2') format('woff2'), url('../fonts/Prata-Regular.woff') format('woff')
+    font-display: swap
+    font-weight: 400
+    font-style: normal
+@font-face
+    font-family: 'RobotoCondensed'
+    src: url('../fonts/RobotoCondensed-Light.woff2') format('woff2'), url('../fonts/RobotoCondensed-Light.woff') format('woff')
+    font-display: swap
+    font-weight: 300
+    font-style: normal
+
+$primary: #F8F8F8
+$black: #303030
+$gold: #E1A661
+$red: #E24B33
+$green: #43807F
+$granite:#495159
+$gray: #D9D9D9
+$turquoise: #A7E492
+$orange: #EA8C48
+
+.green
+    background-color: $green
+.red
+    background-color: $red
+.granite
+    background-color: $granite
+.gold
+    background-color: $gold
+.gray
+    background-color: $gray
+.turquoise
+    background-color: $turquoise
+.orange
+    background-color: $orange
+
+html
+    font-family: 'Inter'
+
+*
+    box-sizing: border-box
+    color: $black
+    outline: none
+    background-repeat: no-repeat
+
+a
+    text-decoration: none
+
+.flex
+    display: flex
+
+.btn
+    background-color: transparent
+    border: none
+    cursor: pointer
+    padding: 0
+
+.title
+    font-family: 'Prata'
+    font-weight: 400
+    font-size: 40px
+    line-height: 100%
+    margin-bottom: 40px
+
+.container
+    width: 1300px
+    margin: 0 auto
+
+.header
+    padding-top: 24px
+    margin-bottom: 20px
+    &__top
+        height: 75px
+        justify-content: space-between
+        align-items: center
+        &__left
+            &__location:hover > .header__top__left__location__icon,
+            &__location:hover > .header__top__left__location__city,
+            &__location:hover > .header__top__left__location__btn
+                opacity: 0.5
+                transition: all 0.3s
+            &__location
+                width: 170px
+                margin-right: 50px
+                padding-left: 3px
+                svg
+                    margin-right: 12px
+                &__city
+                    font-weight: 400
+                    font-size: 14px
+                    line-height: 150%
+                    margin-right: 6px
+                &__btn
+                    height: 8px
+                    &__icon
+                        transition: all 0.3s
+                    .icon-rotate
+                        transform: rotate(180deg)
+                    svg
+                        margin: 0
+                &__dropdown
+                    position: absolute
+                    top: 80px
+                    padding: 24px 24px 22px 24px
+                    background: #FFFFFF
+                    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1)
+                    z-index: 10
+                    transition: all 0.3s
+                    width: 197px
+                    &__list
+                        &__item
+                            width: fit-content
+                            font-weight: 400
+                            font-size: 14px
+                            line-height: 100%
+                            margin-bottom: 21px
+                            cursor: pointer
+                        &__item:last-child
+                            margin: 0
+                        .dropdown-active-item
+                            padding-right: 20px
+                            background-image: url('../img/drd-check.svg')
+                            background-position: right center
+                .dropdown-hidden
+                    opacity: 0
+                    visibility: hidden
+            &__tel
+                font-weight: 400
+                font-size: 14px
+                line-height: 180%
+                svg
+                    margin-right: 5px
+            &__tel:hover
+                opacity: 0.5
+                transition: all 0.3s
+                
+        &__logo
+            transform: translateX(-15px)
+            padding-bottom: 23px
+            &__top
+                font-family: 'Prata'
+                font-style: normal
+                font-weight: 400
+                font-size: 32px
+                line-height: 100%
+                margin-bottom: 6px
+                span
+                    color: $gold
+            &__bottom
+                font-family: 'Roboto Condensed'
+                font-style: normal
+                font-weight: 300
+                font-size: 14px
+                line-height: 100%
+                letter-spacing: 0.27em
+                color: #919191
+        &__right
+            &__account
+                height: fit-content
+                margin-right: 71px
+                padding-top: 9px
+                a
+                    display: flex
+                    height: fit-content
+                    transition: all 0.3s
+                    font-weight: 400
+                    font-size: 14px
+                    line-height: 100%
+                a:hover
+                    color: #979797
+                a:first-child
+                    margin-right: 10px
+                a:first-child:after
+                    content: ""
+                    display: block
+                    width: 1px
+                    height: 10px
+                    background-color: $black
+                    margin: 4px 0 0 10px
+            &__buttons
+                padding-bottom: 5px
+            .like-btn
+                position: relative
+                margin-right: 10px
+                &__quantity
+                    position: absolute
+                    top: 0
+                    right: 0
+                    border-radius: 50%
+                    background-color: $red
+                    width: 19px
+                    height: 19px
+                    font-weight: 700
+                    font-size: 10px
+                    line-height: 190%
+                    color: white
+            .chart-btn
+                margin-right: 22px
+            .cart-btn
+    &__bottom
+        height: 62px
+        background-color: $primary
+        justify-content: space-between
+        align-items: center
+        &__nav
+            width: 997px
+            padding: 23px 50px
+            &__list
+                &__item:hover
+                    opacity: 0.5
+                &__item
+                    font-family: 'Inter'
+                    font-weight: 500
+                    font-size: 13px
+                    line-height: 100%
+                    text-transform: uppercase
+                    transition: all 0.3s
+                &__item:not(:last-child)
+                    margin-right: 60px
+        &__search
+            position: relative
+            width: 303px
+            height: 100%
+            border-left: 1px solid #F0F0F0
+            &__input
+                font-weight: 400
+                font-size: 14px
+                line-height: 100%
+                height: 100%
+                width: 100%
+                border: none
+                background-color: transparent
+                padding-left: 60px
+                transition: all 0.3s
+            &__input:hover
+                opacity: 0.5
+            &__icon
+                position: absolute
+                top: 21px
+                left: 25px
+
+.swiper-button-prev:after,
+.swiper-button-next:after
+    content: ''
+
+.swiper-button-prev,
+.swiper-button-next
+    border: 1px solid $black
+    border-radius: 50%
+    width: 54px
+    height: 54px
+    transition: all 0.3s
+
+.swiper-button-prev svg,
+.swiper-button-next svg
+    transition: all 0.3s
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover
+    background-color: #F5F5F5
+
+.swiper-button-prev:active svg
+    transform: translateX(-10px)
+
+.swiper-button-next:active svg
+    transform: translateX(10px)
+
+.swiper-pagination-bullet
+    border: 1px solid $black
+    background-color: transparent
+    opacity: 1
+    
+.swiper-pagination-bullet-active
+    background-color: $black
+
+.hero
+    height: 560px
+    margin-bottom: 120px
+    &__container
+        height: 100%
+    &__swiper
+        height: 100%
+        &__slide
+            background-color: $primary
+            background-image: url('../img/diamond.svg')
+            background-size: 831px 640px
+            background-position: 5px 20px
+            &__info
+                padding: 176px 100px 176px 126px
+            &__text
+                font-family: 'Prata'
+                font-weight: 400
+                font-size: 20px
+                line-height: 100%
+                color: $black
+                margin-bottom: 30px
+            &__title
+                font-family: 'Prata'
+                font-style: normal
+                font-weight: 400
+                font-size: 50px
+                line-height: 100%
+                color: $black
+                margin-bottom: 54px
+            &__btn
+                width: 200px
+                height: 54px
+                background-color: $black
+                font-weight: 500
+                font-size: 14px
+                line-height: 100%
+                text-transform: uppercase
+                color: white
+                transition: all 0.3s
+            &__btn:hover
+                background-color: #505050
+            &__btn:active
+                background-color: #000000
+            &__img
+                width: 548px
+                height: 560px
+        &__prev
+            top: 275px
+            left: 24px
+        &__next
+            top: 275px
+            right: 24px
+        &__pagination
+            bottom: 21px !important
+.popular
+    margin-bottom: 120px
+    &__list
+        justify-content: space-between
+        &__item:hover
+            transform: translateY(-10px)
+        &__item
+            flex-direction: column
+            width: 200px
+            height: 259px
+            background-color: $primary
+            transition: transform 0.3s
+            &__img
+                margin: 0 auto
+            .p-l-i-i-1
+                padding-top: 61px
+                width: 127px
+            .p-l-i-i-2
+                padding-top: 46px
+                width: 102px
+            .p-l-i-i-3
+                padding-top: 64px
+                margin-bottom: 53px
+                width: 117px
+            .p-l-i-i-4
+                padding-top: 52px
+                width: 141px
+            .p-l-i-i-5
+                padding-top: 47px
+                width: 128px
+            .p-l-i-i-6
+                padding-top: 37px
+                width: 122px
+            &__title
+                align-self: flex-end
+                margin: auto auto 25px auto
+                font-weight: 400
+                font-size: 16px
+                line-height: 100%
+                text-align: center
+
+.tag
+    width: 50px
+    height: 21px
+    border-radius: 15px
+    font-weight: 500
+    font-size: 13px
+    line-height: 160%
+    color: white
+    text-align: center
+    margin-right: 4px
+
+.tag-hidden
+    display: none
+
+.tag-new
+    background-color: #495159
+    
+.tag-hit
+    background-color: #E1A661
+
+.tag-sale
+    background-color: #5B8A8F
+
+.actual-price
+    font-weight: 600
+    font-size: 18px
+    line-height: 100%
+    margin-right: 8px
+.old-price
+    font-weight: 400
+    font-size: 14px
+    line-height: 100%
+    text-decoration-line: line-through
+    color: #8F8F8F
+
+.sale
+    min-height: 510px
+    margin-bottom: 120px
+    &__container
+        height: 100%
+    &__title
+        margin-bottom: 10px
+    &__swiper
+        min-height: 460px
+        &__wrapper
+            height: 100%
+        &__slide
+            height: auto
+            padding: 16px 18px 26px 24px
+            border: 1px solid #F0F0F0
+            &__list
+                margin-bottom: 3px
+                &__item
+            &__icons
+                position: absolute
+                top: 15px
+                right: 18px
+                flex-direction: column
+                &__btn svg path
+                    transition: all 0.2s
+                &__btn:first-child
+                    margin-bottom: 7px
+                &__btn:hover svg path
+                    fill: #979797
+                &__btn:active svg path
+                    fill: $red
+            &__price
+                justify-content: space-between
+                margin-bottom: 16px
+                &__actual
+                &__old
+                &__discount
+                    font-weight: 500
+                    font-size: 13px
+                    line-height: 150%
+                    background-color: #E24B33
+                    border-radius: 15px
+            &__text
+                font-weight: 400
+                font-size: 14px
+                line-height: 160%
+        &__head
+            justify-content: space-between
+            margin-bottom: 36px
+            &__left
+                padding-left: 2px
+                margin: auto auto 0 0
+            &__right
+                position: relative
+                justify-content: space-between
+                width: 116px
+                height: 54px
+        &__btn
+            padding: 13px 30px
+            background-color: #F0F0F0
+            border-radius: 21px
+            font-weight: 400
+            font-size: 14px
+            line-height: 100%
+            margin-right: 8px
+            transition: all 0.3s
+        &__btn:hover
+            background-color: #DDDDDD
+        &__btn:active
+            background-color: $black
+            color: white
+        &__btn-active
+            background-color: $black
+            color: white
+        &__btn:last-child
+            margin-right: 0
+        &__prev
+            position: static
+            margin: 0
+            top: 0
+        &__next
+            position: static
+            margin: 0
+            top: 0
+
+.product__swiper
+    width: 200px
+    height: 200px
+    margin-bottom: 23px
+    &__slide
+        img
+            width: 100%
+            height: 100%
+    &__pagination
+        bottom: 4px !important
+
+.banner
+    margin-bottom: 111px
+    &__list
+        justify-content: space-between
+        &__item
+            position: relative
+            width: 420px
+            height: 290px
+            background-color: $primary
+            background-image: url('../img/diamond.svg')
+            background-size: 454px 350px
+            background-position: -111px 25px
+            &__text
+                padding: 72px 0 0 26px
+                font-size: 20px
+                line-height: 160%
+                text-transform: uppercase
+                margin-bottom: 20px
+            &__discount
+                align-items: center
+                width: 194px
+                height: 52px
+                font-weight: 600
+                font-size: 24px
+                color: white
+                padding-left: 26px
+                span
+                    padding-left: 13px
+                    font-weight: 600
+                    font-size: 36px
+                    color: white
+            &__img
+                position: absolute
+                top: 0
+            .b-l-i-i-1
+                right: 18px
+            .b-l-i-i-2
+                right: 0px
+            .b-l-i-i-3
+                right: 0px
+
+.day
+    height: 637px
+    margin-bottom: 120px
+    &__title
+        margin: 0
+    &__swiper
+        height: 100%
+        &__head
+            justify-content: space-between
+            align-items: center
+            height: 54px
+            margin-bottom: 33px
+        &__buttons
+            justify-content: space-between
+            width: 116px
+        &__prev
+            position: static
+            margin: 0
+        &__next
+            position: static
+            margin: 0
+        &__wrapper
+        &__slide
+            justify-content: space-between
+            height: auto
+            &__left
+                width: 550px
+                &__list
+                    position: absolute
+                    top: 15px
+                    left: 18px
+                    z-index: 20
+            &__right
+                width: 650px
+                &__raiting
+                    margin-bottom: 24px
+                &__star
+                    margin-right: 6px
+                &__star:last-child
+                    margin-right: 10px
+                &__score
+                    font-weight: 400
+                    font-size: 14px
+                    line-height: 130%
+                &__title
+                    font-family: 'Prata'
+                    font-style: normal
+                    font-weight: 400
+                    font-size: 32px
+                    line-height: 100%
+                    margin-bottom: 20px
+                &__number
+                    font-weight: 400
+                    font-size: 14px
+                    line-height: 100%
+                    color: #8F8F8F
+                    margin-bottom: 2px
+                &__profit
+                    padding-bottom: 20px
+                    border-bottom: 1px solid #F0F0F0
+                &__price
+                    padding-top: 32px
+                    margin-right: 33px
+                    &__actual
+                        margin-right: 18px
+                        font-size: 20px
+                    &__old
+                        font-size: 16px
+                        line-height: 22px
+                        margin-right: 16px
+                    &__discount
+                        transform: translateY(-5px)
+                &__colors
+                    padding-top: 26px
+                    margin-bottom: 30px
+                    &__title
+                        font-weight: 600
+                        font-size: 12px
+                        line-height: 100%
+                        text-transform: uppercase
+                        margin-bottom: 16px
+                    &__list
+                        justify-content: space-between
+                        width: 152px
+                        height: 32px
+                    &__btn:disabled
+                        opacity: 0.3
+                    &__btn:hover
+                        border: 1px solid $black
+                    &__btn:active
+                        border: 1px solid $black
+                    &__btn
+                        justify-content: center
+                        align-items: center
+                        width: 32px
+                        height: 32px
+                        border-radius: 50%
+                        border: 1px solid #DADADA
+                        transition: all 0.3s
+                        .color
+                            width: 24px
+                            height: 24px
+                            border-radius: 50%
+                &__size
+                    margin-bottom: 38px
+                    &__title
+                        font-weight: 600
+                        font-size: 12px
+                        line-height: 160%
+                        text-transform: uppercase
+                        margin-bottom: 16px
+                        p
+                            margin-right: 10px
+                    &__list
+                    &__btn:disabled
+                        opacity: 0.3
+                    &__btn:hover
+                        border: 1px solid $black
+                    &__btn:active
+                        background-color: $black
+                        border: 1px solid $black
+                        color: white
+                    &__btn
+                        width: 50px
+                        height: 32px
+                        left: 58px
+                        top: 0px
+                        border: 1px solid #DADADA
+                        margin-right: 8px
+                        font-weight: 400
+                        font-size: 14px
+                        line-height: 100%
+                        text-align: center
+                        transition: all 0.3s
+                &__bottom
+                    &__left
+                        flex-direction: column
+                        margin-right: 40px
+                    &__btn:first-child:hover
+                        background-color: #505050
+                    &__btn:last-child:hover
+                        background-color: $black
+                        color: white
+                    &__btn:first-child:active
+                        background-color: black
+                    &__btn:last-child:active
+                        background-color: black
+                        color: white
+                    &__btn
+                        width: 400px
+                        height: 56px
+                        background-color: $black
+                        color: white
+                        font-weight: 500
+                        font-size: 14px
+                        line-height: 100%
+                        text-align: center
+                        text-transform: uppercase
+                        margin-bottom: 10px
+                        transition: all 0.3s
+                    &__btn:last-child
+                        border: 1px solid $black
+                        background-color: white
+                        color: $black
+                        margin-bottom: 0
+                    &__right
+                        flex-direction: column
+                        &__item
+                            align-items: center
+                            justify-content: flex-start
+                            font-weight: 300
+                            font-size: 14px
+                            line-height: 160%
+                            margin-bottom: 18px
+                            transition: all 0.3s
+                            svg
+                                margin-right: 8px
+                            svg line,
+                            svg path
+                                transition: all 0.3s
+                        &__item:hover
+                            color: #979797
+                        &__item:nth-child(2):hover svg line
+                            stroke: #979797
+                        &__item:hover svg path
+                            fill: #979797
+                        &__item:active
+                            color: $black
+                        &__item:nth-child(2):active svg line
+                            stroke: $red
+                        &__item:active svg path
+                            fill: $red
+                            
+.day__inner
+    &__swiper
+    &__wrapper
+    &__slide
+        img
+            width: 550px
+            height: 550px
+    &__prev:hover,
+    &__next:hover
+        background-color: transparent
+    &__prev
+        top: 268px
+        left: -9px
+        border: none
+    &__next
+        top: 268px
+        right: -9px
+        border: none
+
+.countdown
+    flex-direction: row
+    justify-content: space-between
+    padding: 12px 14px
+    width: 224px
+    height: 64px
+    background: #F5F5F5
+    &__item
+        padding: 6px
+        width: 52px
+        height: 40px
+        background-color: white
+        border: 1px solid #D0D0D0
+    &__time
+        font-weight: 700
+        font-size: 16px
+        line-height: 100%
+        text-align: center
+    &__title
+        font-weight: 300
+        font-size: 11px
+        line-height: 100%
+        text-align: center
+    &__colon
+        padding-top: 10px
+
+.color-active
+    border: 1px solid $black
+
+.size-active
+    background-color: $black
+    border: 1px solid $black
+    color: white
+
+.tip
+    display: inline-block
+    width: 18px
+    height: 18px
+    border-radius: 50%
+    background-color: #F0F0F0
+    text-align: center
+    font-weight: 500
+    font-size: 12px
+    line-height: 18px
+    transition: all 0.3s
+    &__text
+        padding: 24px
+.tip:hover
+    background-color: #D3D3D3
+
+.tippy-box[data-theme~='primary'] 
+    background-color: white
+    color:  white
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1)
+
+.tippy-box[data-theme~='primary'][data-placement^='top'] > .tippy-arrow::before 
+    border-top-color: white
+
+.tippy-box[data-theme~='primary'][data-placement^='bottom'] > .tippy-arrow::before 
+    border-bottom-color: white
+
+.tippy-box[data-theme~='primary'][data-placement^='left'] > .tippy-arrow::before 
+    border-left-color: white
+
+.tippy-box[data-theme~='primary'][data-placement^='right'] > .tippy-arrow::before 
+    border-right-color: white
+
+.articles
+    margin-bottom: 80px
+    &__head
+        justify-content: space-between
+        align-items: flex-end
+        margin-bottom: 40px
+    &__title
+        margin: 0
+    &__link
+        background-image: url('../img/article-arrow.svg')
+        background-position: right center
+        padding-right: 38px
+    &__link:hover
+        text-decoration: underline
+    &__list
+        justify-content: space-between
+    &__item
+        width: 310px
+        &__img
+            margin-bottom: 20px
+            width: 310px
+            height: 381px
+        &__date
+            font-weight: 400
+            font-size: 14px
+            line-height: 100%
+            color: #8F8F8F
+            margin-bottom: 6px
+        &__title
+            font-weight: 500
+            font-size: 16px
+            line-height: 150%
+
+.burger
+    display: none
+    padding: 0 10px
+    height: 24px
+    &__close
+        display: none
+
+.burger-bg
+    position: fixed
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    z-index: 10
+    background-color: #6c646461
+    opacity: 0
+    visibility: hidden
+
+.burger-bg-active
+    opacity: 1
+    visibility: visible
